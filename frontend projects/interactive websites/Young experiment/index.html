@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Young Experiment</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- incluímos parámetros de control como lambda, indice en la fase des
+     pués de las ranuras, tamaño de las ranuras (slit width), y distancia
+     entre ranuras (distance between slit) -->
+    <h1>Young Experiment</h1>
+
+    <div id="controllerDiv">
+
+    <div class="controlGroup">
+        <label for="lambda">lambda (nm):</label>
+        <input type="range" id="lambda" min="380" max="780" step="1" value="380">
+        <span id="lambdaValue">380</span>
+    </div>
+
+    <div class="controlGroup">
+        <label for="n2">n2:</label>
+        <input type="range" id="n2" min="1" max="5" step="0.1" value="1">
+        <span id="n2Value">1</span> 
+    </div>
+
+    <div class="controlGroup">
+        <label for="b">slit width (mm):</label>
+        <input type="range" id="b" min="0.005" max="0.015" step="0.001" value="0.005">
+        <span id="bValue">0.005</span>
+    </div>
+
+    <div class="controlGroup">
+        <label for="d">distance between slit (mm):</label>
+        <input type="range" id="d" min="0.03" max="0.12" step="0.01" value="0.01">
+        <span id="dValue">0.03</span>
+    </div>
+
+    <!-- el botón da inicio a la animación de interferencia -->
+    <button id="startButton">Start</button>
+
+    </div>
+
+    <!-- canvas donde va a ir la animación del experimento -->
+    <div id="sceneDiv">
+        <canvas id="scene"></canvas>
+    </div>
+    
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

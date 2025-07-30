@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michelson Interferometer</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Michelson interactive interferometer</h1>
+
+    <div id="controllerDiv">
+        <!-- se establecieron barras de control de los parámetros siguientes:
+        L1: distancia entre divisor de haz y espejo ortogonal a la pantalla.
+        L2: distancia entre divisor de haz y espejo paralelo a la pantalla.
+        lambda: longitud de onda del haz. -->
+        <!-- El rango óptimo de L1 y L2 se determinaron a partir de valores
+         típicos de laboratorio. -->
+        <div class="controlGroup">
+            <label for="L1">L1 (cm):</label>
+            <input type="range" id="L1" min="10" max="10.1" step="0.00001" value="10">
+            <span id="L1Value">10</span> 
+        </div>
+
+        <div class="controlGroup">
+            <label for="L2">L2 (cm):</label>
+            <input type="range" id="L2" min="10" max="10.1" step="0.00001" value="10">
+            <span id="L2Value">10</span> 
+        </div>
+        
+        <div class="controlGroup">
+            <label for="lambda">lambda (nm):</label>
+            <input type="range" id="lambda" min="380" max="780" step="1" value="380">
+            <span id="lambdaValue">380</span>
+        </div>
+        
+    </div>
+
+
+    <div id="sceneDiv">
+        <canvas id="scene"></canvas>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
