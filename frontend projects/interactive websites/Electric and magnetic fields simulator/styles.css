@@ -1,0 +1,122 @@
+body{
+    height:100%;
+    background-color: aqua;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: block;
+}
+
+
+h1 {
+    color: #2c3e50;
+    margin-top: 20px;
+}
+p{
+    color: #2c3e50;
+    margin-top: 20px;
+    font-style: italic;
+    font-size: 14px;
+}
+
+#controllerPanel{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    justify-content: center;
+}
+
+
+
+/* botones */
+#newSource{
+    background-color: green;
+    border-radius: 10%;
+    border-color: black;
+    font-size: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#newSource:hover{
+    background-color: greenyellow;
+}
+
+
+/* El botón para añadir la fuente se encuentra oculto hasta que se presiona
+el de "newSource" */
+#addSource{
+    display: flex;
+    flex-direction: column;
+}
+#addButton{
+    display: inline-block;
+    background-color: red;
+    border-radius: 10%;
+    border-color: black;
+    font-size: 30px;
+    opacity:0;
+    transition: background-color 0.3s ease, opacity 0.5s ease;
+}
+#addButton:hover{
+    background-color: palevioletred;
+}
+/* transición suave de opacidad */
+#addButton.show{
+    opacity: 1;
+}
+
+
+
+
+
+
+/* Panel de opciones: al inicio se encuentra oculto */
+#sourceOptions, #fieldOptions, #sourceProperties {
+    border-radius: 5%;
+    background-color: skyblue;
+    display:flex;
+    flex-direction: column;
+    margin:5px;
+    align-items:flex-start;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+/* transición suave de opacidad y tamaño */
+#sourceOptions.show, #fieldOptions.show, #sourceProperties.show {
+    opacity: 1;
+    max-height: 500px; /* suficiente para que todo entre */
+}
+
+
+
+
+
+
+
+/* panel de fuentes agregadas */
+#sourcePanel{
+    padding:3px;
+    display: block;
+    font-size: 15px;
+    border-radius: 5%;
+    background-color: skyblue;
+    margin:5px;
+}
+
+
+
+/* canvas */
+#sceneController{
+    background-color: white;
+    width:100%;
+    height: 700px;
+}
+#scene{
+    background-color: black;
+    border-radius: 5%;
+    width:100%;
+    height: 100%;
+}
